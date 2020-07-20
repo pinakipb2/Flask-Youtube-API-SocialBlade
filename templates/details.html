@@ -1,0 +1,288 @@
+<title>YouFinder</title>
+<link rel="icon" href="{{url_for('static',filename='favicon.png')}}" type="image">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    
+        <!-- Brand/logo -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">YouFinder</a>
+        </div>
+        
+        <!-- Collapsible Navbar -->
+        <div class="collapse navbar-collapse" id="example-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    
+    </div>
+</nav>
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    <div class="container">    
+        <div id="loginbox" style="margin-top:20px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">{{channel_name|upper}}</div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-new-window"></i> URL</span>
+                                        <a href="{{channel_url}}" target="_blank"><input id="login-username" type="text" class="form-control" name="name" value="{{channel_url}}" readonly> </a>                                       
+                                    </div>
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i> Description</span>
+                                        <input id="login-username" type="text" class="form-control" name="name" value="{{desc}}" disabled>                                        
+                                    </div>
+                                
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-upload"></i> Uploads</span>
+                                        <input id="login-username" type="text" class="form-control" name="name" value="{{uploads}}" disabled>                                        
+                                    </div>
+
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> Subscribers</span>
+                                        <input id="login-username" type="text" class="form-control" name="name" value="{{subs}}" disabled>                                        
+                                    </div>
+
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-fire"></i> Views</span>
+                                        <input id="login-username" type="text" class="form-control" name="name" value="{{views}}" disabled>                                        
+                                    </div>
+                                    
+
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <a href="/"><button id="btn-login" type="button" class="btn btn-success">Home  </button></a>
+
+                                    </div>
+                                </div>
+
+
+                                  
+                              
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+        
+
+        </div>
+
+
+        <div class="footer-bottom navbar-fixed-bottom">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                <div class="copyright">
+
+                    © 2020, Pinaki, All rights reserved
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                <div class="design">
+
+                     <a href="/">YouFinder </a> |  <a target="_blank" href="https://pinakipb2.blogspot.com/">YouTube Details Finder API by Pinaki</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<style>
+    
+
+
+/************************************************************
+*************************Footer******************************
+*************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+.footer1 {
+    background: #fff url("../images/footer/footer-bg.png") repeat scroll left top;
+    padding-top: 40px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;/*  border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: #003;*/
+}
+
+
+
+.title-widget {
+    color: #898989;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
+    padding-left: 28px;
+}
+
+.title-widget::before {
+    background-color: #ea5644;
+    content: "";
+    height: 22px;
+    left: 0px;
+    position: absolute;
+    top: -2px;
+    width: 5px;
+}
+
+
+
+.widget_nav_menu ul {
+    list-style: outside none none;
+    padding-left: 0;
+}
+
+.widget_archive ul li {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 3px;
+}
+
+
+.widget_nav_menu ul li {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    position: relative;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    width:95%;
+}
+
+
+
+.title-median {
+    color: #636363;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.footerp p {font-family: 'Gudea', sans-serif; }
+
+
+#social:hover {
+                -webkit-transform:scale(1.1); 
+-moz-transform:scale(1.1); 
+-o-transform:scale(1.1); 
+            }
+            #social {
+                -webkit-transform:scale(0.8);
+                /* Browser Variations: */
+-moz-transform:scale(0.8);
+-o-transform:scale(0.8); 
+-webkit-transition-duration: 0.5s; 
+-moz-transition-duration: 0.5s;
+-o-transition-duration: 0.5s;
+            }           
+/* 
+    Only Needed in Multi-Coloured Variation 
+                                               */
+            .social-fb:hover {
+                color: #3B5998;
+            }
+            .social-tw:hover {
+                color: #4099FF;
+            }
+            .social-gp:hover {
+                color: #d34836;
+            }
+            .social-em:hover {
+                color: #f39c12;
+            }
+            .nomargin { margin:0px; padding:0px;}
+
+
+
+
+
+.footer-bottom {
+    background-color: #15224f;
+    min-height: 30px;
+    width: 100%;
+}
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+.design {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+    text-align: right;
+}
+.design a {
+    color: #fff;
+}
+
+
+/************************************************************
+*************************Footer******************************
+*************************************************************/
+</style>
