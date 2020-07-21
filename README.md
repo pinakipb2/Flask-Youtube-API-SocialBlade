@@ -6,7 +6,7 @@ An API created from Social Blade(https://socialblade.com/) using webscraping and
 # Steps to Installation
 First of all clone this project and open terminal in that location and execute the below given commands : 
 ```
-pip install virtualenv
+$ pip install virtualenv
 ```
 ```
 $ youfinder\Scripts\activate
